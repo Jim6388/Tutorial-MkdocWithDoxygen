@@ -20,14 +20,12 @@ This step-by-step tutorial empowers you to write professional technical document
 
 This tutorial empowers you to craft professional C documentation with ease. We'll leverage two powerful tools:
 
-MkDocs Material: This popular theme is a powerful documentation framework on top of MkDocs. It allows you focus on the content of your documentation and create a professional static site in minutes. No need to know HTML, CSS or JavaScript – let Material for MkDocs do the heavy lifting for you
-Doxygen: This tool automates the creation of detailed API reference documentation from your C code comments, saving you significant time and effort.
+- MkDocs Material: This popular theme is a powerful documentation framework on top of MkDocs. It allows you focus on the content of your documentation and create a professional static site in minutes. No need to know HTML, CSS or JavaScript – let Material for MkDocs do the heavy lifting for you
+- Doxygen: This tool automates the creation of detailed API reference documentation from your C code comments, saving you significant time and effort.
 
 ### Our Unique Approach
 
 While these tools are powerful, they don't natively integrate. This tutorial addresses this by using a custom Python script that bridges the gap between Doxygen and MkDocs Material. This script ensures seamless integration and a unified user experience for your C documentation.
-
-Ready to Get Started? (Consider adding a call to action here)
 
 Ready to build beautiful docs? The detailed guide awaits you in the next section.
 
