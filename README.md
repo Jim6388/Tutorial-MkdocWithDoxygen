@@ -191,5 +191,5 @@ This will create the documentation in the specified output directory.
 
 ## Reference
 
-[Material of Mkdoc official website](https://squidfunk.github.io/mkdocs-material/)
-[Doxygen official website](https://www.doxygen.nl/)
+- [Material of Mkdoc official website](https://squidfunk.github.io/mkdocs-material/)
+- [Doxygen official website](https://www.doxygen.nl/)
