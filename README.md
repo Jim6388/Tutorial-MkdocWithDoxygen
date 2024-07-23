@@ -189,6 +189,34 @@ doxygen
 
 This will create the documentation in the specified output directory.
 
+### Integrating Doxygen Output with MkDocs
+
+Once you've generated the Doxygen documentation in XML format, you can integrate it into your MkDocs project for seamless access to API reference documentation. This section outlines the process using a Python script.
+
+Note:
+
+> This explanation assumes you have clone my Python script named `doxy2md.py` into your device.
+
+Here's how to integrate the Doxygen output:
+
+- **Copy the Script**:  Copy the `doxy2md.py` script to your project's root directory.
+- **Navigate to Project Root**: Open your terminal and navigate to your project's root directory.
+- **Run the Integration Script**: Execute the Python script using the following command:
+
+  ```sh
+  python3 doxy2md.py <source_dir> <dest_dir>
+  ```
+
+  Explanation of arguments:
+  
+  - `<source_dir>`: Replace this with the path to your Doxygen XML output directory (e.g., `<project-root-directory>/doxybuild/xml`).
+  - `<dest_dir>`: Replace this with the path to your desired destination directory within your MkDocs project (e.g., `<project-root-directory>/docs/api`).
+
+- **Verify Output**: After running the script, the converted Markdown files will be generated in the specified destination directory.
+- **Preview and View Documentation**:
+  - Run `mkdocs serve` to preview your MkDocs documentation locally (usually accessible at `http://127.0.0.1:8000/`).
+  - Open your web browser and navigate to the preview URL. You should now see the API reference documentation integrated into your C/C++ project documentation built by MkDocs.
+
 ## Reference
 
 - [Material of Mkdoc official website](https://squidfunk.github.io/mkdocs-material/)
