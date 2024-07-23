@@ -96,6 +96,100 @@ Here's how to integrate it into your project:
 Note:
 > You could also check this [reference](https://squidfunk.github.io/mkdocs-material/reference/) if you want to have a deep dive about how to properly configure the options.
 
+### Doxygen
+
+Doxygen is a powerful tool for generating API documentation from source code comments. It parses your C/C++ code and extracts information from specially formatted comments to create detailed API reference documentation. By integrating Doxygen with your MkDocs project, you can create a comprehensive documentation suite that covers both conceptual and code-level information.
+
+#### Install Doxygen
+
+Open the linux terminal and enter the following commands to install doxygen
+
+``` sh
+sudo apt update
+sudo apt upgrade
+sudo apt install doxygen
+```
+
+Once you've installed Doxygen, you can verify it by running the following command in your terminal:
+
+``` sh
+doxygen --version
+```
+
+#### Creating a Basic Doxygen Configuration
+
+Note:
+
+> If you already have a suitable `Doxyfile`, simply copy it into your project's root directory and skip the following steps.
+
+Doxygen uses a configuration file named `Doxyfile` to specify project settings. Use the `doxygen -g` command to generate a default configuration file in your project's root directory.
+
+#### Configuring Doxygen
+
+Open the generated Doxyfile and customize the following settings to match your project:
+
+- `PROJECT_NAME`: Set the name of your project.
+- `OUTPUT_DIRECTORY`: Specify the output directory for the generated documentation.
+- `INPUT`: List the source code files to be documented.
+- `FILE_PATTERNS`: Set patterns to match your source code files (e.g., *.c, *.h).
+- `RECURSIVE`: Enable recursive searching for source files (set to YES).
+- `GENERATE_HTML`: Enable HTML output (set to YES).
+- `GENERATE_XML`: Enable XML output (set to YES).
+
+Note:
+> The python script integrated MkDocs and Doxygen uses Doxygen XML output. Therefore, make sure you have enabled XML output in Doxyfile.
+
+#### Write specially formatted comments in your source code
+
+Doxygen comments typically follow a C-style block comment format (/** */) but include special tags within the comment block to convey specific information.
+
+**File-level comments**:
+
+Place the following comment at the beginning of your source file:
+
+``` c
+/**
+ * @file filename.c
+ * @brief Brief description of the file's contents.
+ *
+ * @author Your Name
+ * @date YYYY-MM-DD
+ */
+```
+
+**Function-level comments**:
+
+Use the following structure for documenting functions:
+
+``` c
+/**
+ * @brief Short description of the code element (function, variable, etc.).
+ *
+ * @details (Optional) More detailed explanation of the code element.
+ *
+ * @param[in] name1 Description of the first input parameter.
+ * @param[in] name2 Description of the second input parameter.
+ * ... (additional parameters)
+ *
+ * @return Description of the return value.
+ *
+ * @see (Optional) References to related functions or code elements.
+ */
+ ```
+
+By following these guidelines, you can effectively document your C/++ code using Doxygen comments and generate comprehensive API reference documentation
+
+#### Generate the API documentation
+
+To generate the Doxygen API documentation, move to the project root directory and run the following command in your terminal:
+
+```sh
+doxygen 
+```
+
+This will create the documentation in the specified output directory.
+
 ## Reference
 
 [Material of Mkdoc official website](https://squidfunk.github.io/mkdocs-material/)
+[Doxygen official website](https://www.doxygen.nl/)
