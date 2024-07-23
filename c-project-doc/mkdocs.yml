@@ -1,0 +1,57 @@
+# Project information
+site_name: Technical documentation template for C/C++ projects
+#site_url: https://mydomain.org/mysite
+site_author: Jim Tsao
+site_description: >-
+  This demo is used to illustrate how to use MkDocs and Doxygen to create 
+  professional and user-friendly technical documentation for your C/C++ projects 
+
+# Copyright
+copyright: Copyright &copy; 2024 Jim Tsao
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - tables
+
+# Remove "Made with Material for MkDocs" shown in the footer
+extra:
+  generator: false
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
