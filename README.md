@@ -29,6 +29,11 @@ While these tools are powerful, they don't natively integrate. This tutorial add
 
 Ready to build beautiful docs? The detailed guide awaits you in the next section.
 
+### Prerequisite
+
+Python
+Install Doxygen
+
 ## Let's Get Started: A Step-by-Step Tutorial for C Documentation
 
 ### Material for MkDocs
@@ -71,7 +76,7 @@ Congratulations! You've completed the basic configuration. To preview your docum
 mkdocs serve
 ```
 
-This starts a development server that allows you to view your documentation in a web browser (usually at http://127.0.0.1:8000/).
+This starts a development server that allows you to view your documentation in a web browser (usually at `http://127.0.0.1:8000/`).
 
 ### Building Your Documentation Site
 
